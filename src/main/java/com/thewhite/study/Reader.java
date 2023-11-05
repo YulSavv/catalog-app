@@ -3,6 +3,7 @@ package com.thewhite.study;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
@@ -18,5 +19,10 @@ public class Reader {
             throw new RuntimeException(e);
         }
         return notes;
+    }
+
+    public static boolean checkPath (String pathData) {
+        File file = new File(pathData);
+        return file.exists() && pathData.endsWith(".json");
     }
 }

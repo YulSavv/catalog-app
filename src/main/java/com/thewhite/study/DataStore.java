@@ -11,9 +11,10 @@ public class DataStore {
         return notes;
     }
 
+    /*
     public DataStore() {
         notes = Reader.read("src/main/resources/data.json");
-    }
+    } */
 
     public DataStore(Map<Integer, Note> notes) {
         this.notes = notes;
